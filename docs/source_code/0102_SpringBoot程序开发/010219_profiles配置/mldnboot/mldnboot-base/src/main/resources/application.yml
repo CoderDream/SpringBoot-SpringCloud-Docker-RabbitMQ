@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev             # 定义默认生效的环境
+---
+spring:
+  profiles: dev
+server: 
+  port: 7070                # 此处设置的服务的访问端口配置
+---
+spring:
+  profiles: beta
+server: 
+  port: 8080                # 此处设置的服务的访问端口配置
+---
+spring:
+  profiles: product
+server: 
+  port: 80                  # 此处设置的服务的访问端口配置

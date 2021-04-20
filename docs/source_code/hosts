@@ -1,0 +1,23 @@
+127.0.0.1	dept-8001.com
+127.0.0.1	dept-8002.com
+127.0.0.1	dept-8003.com
+127.0.0.1	eureka-7001.com
+127.0.0.1	gateway-9501.com
+127.0.0.1	upload-8101.com
+127.0.0.1	config-7501.com
+127.0.0.1	config-7502.com
+127.0.0.1	config-7503.com
+127.0.0.1	config-client.com
+127.0.0.1	consumer.com
+127.0.0.1	zipkin.com
+127.0.0.1  	oauth-server.com
+
+192.168.79.130 	rabbitmq-single
+
+
+127.0.0.1	eureka-a.com
+127.0.0.1	eureka-b.com
+127.0.0.1	eureka-c.com
+
+127.0.0.1	dashboard.com
+127.0.0.1	turbine.com

@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: mldncloud-config-encrypt                  # 定义微服务名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource    # 配置当前要使用的数据源的操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver      # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/mldn8001           # 数据库连接地址
+    password: '{cipher}ec90dd10a225f9873c5e178388de29525dbb778d5c189f84f0b4406220c34e0f'
+    username: root                                  # 数据库用户名

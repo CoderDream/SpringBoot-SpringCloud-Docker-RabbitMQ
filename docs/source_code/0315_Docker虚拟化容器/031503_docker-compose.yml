@@ -1,0 +1,14 @@
+version: '2'
+services:
+  eurekaserver1:
+    image: mldn/mldncloud-eureka:dev
+    ports:
+      - "7001:7001"
+    environment:
+      - spring.profiles.active=dev
+  eurekaserver2:
+    image: mldn/mldncloud-eureka:dev
+    ports:
+      - "7002:7002"
+    environment:
+      - spring.profiles.active=product

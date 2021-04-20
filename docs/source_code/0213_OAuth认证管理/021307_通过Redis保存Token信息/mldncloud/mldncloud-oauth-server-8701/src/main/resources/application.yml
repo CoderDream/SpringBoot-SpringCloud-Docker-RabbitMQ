@@ -1,0 +1,40 @@
+spring:
+  redis:              # Redis相关配置
+    host: redis-server      # 主机名称
+    port: 6379            # 端口号
+    password: mldnjava        # 认证密码
+    timeout: 1000         # 连接超时时间
+    database: 0           # 默认数据库
+    pool:               # 连接池配置
+      max-active: 10        # 最大连接数
+      max-idle: 8         # 最大维持连接数
+      min-idle: 2         # 最小维持连接数
+      max-wait: 100         # 最大等待连接超时时间
+  application:
+    name: mldncloud-oauth-server                  # 定义微服务名称
+  datasource: 
+    type: com.alibaba.druid.pool.DruidDataSource  # 配置数据源类型
+    url: jdbc:mysql://localhost:3306/mldn     # 数据库的连接地址
+    driver-class-name: org.gjt.mm.mysql.Driver    # 驱动程序
+    username: root                                # 用户名
+    password: mysqladmin                          # 密码
+    dbcp2:                                        # 数据库连接池配置
+      min-idle: 1                                 # 最小维持连接数
+      max-idle: 1                                 # 最大维持连接数
+      max-total: 1                                # 最大的可用连接数
+      max-wait-millis: 200                        # 最大等待时间
+      initial-size: 1                             # 初始化连接数
+  jpa:                                            # 定义JPA的相关配置项
+    show-sql: true                                # 显示执行的SQL
+server:
+  port: 8701                                      # 服务端口
+security:
+  oauth2:
+    resource:
+      filter-order: 3    # 对于Resource的过滤执行流程定义顺序
+
+info:
+  app.name: mldncloud-oauth-server
+  company.name: www.mldn.cn
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
