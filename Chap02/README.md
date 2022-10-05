@@ -118,3 +118,58 @@ http://localhost:8080/
 ```
 
  ![image-20221005130134671](assets\image-20221005130134671.png)
+
+
+
+## 2.2 SpringBoot程序测试
+
+### 1. pom文件新增依赖
+
+```xml
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+### 2. 测试类
+
+```java
+package cn.mldn.mldnboot.test;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+import cn.mldn.mldnboot.SampleController;
+import junit.framework.TestCase;
+
+@SpringBootTest(classes = SampleController.class)	// 定义要测试的SpringBoot类
+@RunWith(SpringJUnit4ClassRunner.class)				// 使用Junit进行测试
+@WebAppConfiguration								// 进行Web应用配置
+public class TestSampleController {
+	@Autowired
+	private SampleController sampleController;		// 注入控制器对象
+
+	@Test
+	public void testHome() {						// 使用junit测试
+		TestCase.assertEquals(this.sampleController.home(), "www.mldn.cn");
+	}
+}
+```
+
+### 3. 测试结果
+
+ ![image-20221005162313276](assets\image-20221005162313276.png)
+
+
+

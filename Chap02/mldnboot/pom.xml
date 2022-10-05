@@ -12,7 +12,7 @@
 
     <properties>
         <jdk.version>1.8</jdk.version>
-        <spring-boot-dependencies.version>1.5.9.RELEASE</spring-boot-dependencies.version>
+        <spring-boot-dependencies.version>2.7.3</spring-boot-dependencies.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
@@ -20,7 +20,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>            <!-- 定义SpringBoot依赖管理 -->
+            <dependency>            <!--  定义SpringBoot依赖管理 -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot-dependencies.version}</version>
