@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import cn.mldn.mldnboot.SampleController;
+import cn.mldn.mldnboot.controller.SampleController;
 import junit.framework.TestCase;
 
 @SpringBootTest(classes = SampleController.class)	// 定义要测试的SpringBoot类

@@ -1,4 +1,4 @@
-package cn.mldn.mldnboot;
+package cn.mldn.mldnboot.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -6,8 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller                                                        // 控制器注解
-@EnableAutoConfiguration                                        // 启用自动配置
+//@Controller                        // 控制器注解
 public class SampleController {
     @RequestMapping("/")                                        // 访问映射路径
     @ResponseBody                                                // rest返回形式
