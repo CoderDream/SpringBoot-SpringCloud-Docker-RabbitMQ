@@ -1,5 +1,5 @@
 spring:
   messages:                 # 定义资源文件，多个资源文件使用“,”分割
-    basename: i18n/Messages 
-server: 
-  port: 80                  # 此处设置的服务的访问端口配置
+    basename: i18n/Messages
+server:
+  port: 8088                  # 此处设置的服务的访问端口配置

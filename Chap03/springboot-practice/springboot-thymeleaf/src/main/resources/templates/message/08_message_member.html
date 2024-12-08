@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">  <!-- 引入命名空间 -->
+<head>
+  <title>SpringBoot模版渲染</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="/images/mldn.ico"/>
+</head>
+<body>
+<div th:object="${member}">
+  <p th:if="*{age ge 18}">
+    成年人应该为了梦想而努力！
+  </p>
+  <p th:unless="*{age ge 18}">
+    未成年人应该好好学习基础文化课程，好好锻炼身体！
+  </p>
+  <p th:if="*{name eq '李兴华'}">
+    欢迎李老师来访，鼓掌~
+  </p>
+  <hr/>
+  <div th:object="${member}">
+    <p th:switch="*{mid}">
+      <span th:case="mldnjava">欢迎“mldnjava”用户访问</span>
+      <span th:case="jixianit">欢迎“jixianit”用户访问</span>
+      <span th:case="*">没有匹配成功的数据，别匹配了！</span>
+    </p>
+  </div>
+</div>
+</body>
+</html>

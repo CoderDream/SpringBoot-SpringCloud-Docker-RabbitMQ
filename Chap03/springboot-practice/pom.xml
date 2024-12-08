@@ -35,6 +35,7 @@
             <plugin>									<!-- 配置编译插件 -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${jdk.version}</source>		<!-- 源代码使用的开发版本 -->
                     <target>${jdk.version}</target>		<!-- 需要生成的目标class文件的编译版本 -->
